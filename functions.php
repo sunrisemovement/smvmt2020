@@ -10,6 +10,15 @@ function enqueue_parent_styles() {
 }
 
 /**
+ * Enqeue custom admin styles
+ */
+add_action( 'admin_enqueue_scripts', 'enqueue_admin_styles' );
+
+function enqueue_admin_styles() {
+   wp_enqueue_style( 'smvmt2020-admin-style', get_stylesheet_directory_uri().'/assets/css/admin-style.css' );
+}
+
+/**
  * Setup Advanced Custom Fields
  * To udpate ACF, replace includes/acf with the latest version of the plugin
  */
