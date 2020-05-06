@@ -1,0 +1,23 @@
+.smvmt2020-input {
+    padding: 6px 12px!important;
+}
+
+.smvmt2020-input--inline {
+    display: flex;
+    align-items: center;
+}
+
+.smvmt2020-input--inline .acf-label {
+    order: 2;
+    margin: 0!important;
+}
+
+.smvmt2020-input--inline .acf-label > label {
+    font-weight: 400!important;
+    margin: 0!important;
+}
+
+.smvmt2020-input--inline .acf-input {
+    order: 1;
+    width: auto;
+}
