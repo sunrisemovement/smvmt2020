@@ -5,16 +5,29 @@
  * Docs: https://www.advancedcustomfields.com/resources/register-fields-via-php/
  */
 
-acf_add_local_field_group( [
-    'key' => 'group_1',
-    'title' => 'My Group',
+acf_add_local_field_group([
+    'key' => 'group_smvmt2020_appearance',
+    'title' => 'Appearance',
     'fields' => [
         [
-            'key' => 'field_1',
-            'label' => 'Sub Title',
-            'name' => 'sub_title',
-            'type' => 'text',
-        ]
+            'key' => 'field_smvmt2020_appearance_disable_title',
+            'label' => 'Disable Title',
+            'name' => 'disable_title',
+            'type' => 'true_false',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => [
+                'width' => '',
+                'class' => 'smvmt2020-input smvmt2020-input--inline',
+                'id' => '',
+            ],
+            'message' => '',
+            'default_value' => 0,
+            'ui' => 0,
+            'ui_on_text' => '',
+            'ui_off_text' => '',
+        ],
     ],
     'location' => [
         [
@@ -25,4 +38,12 @@ acf_add_local_field_group( [
             ],
         ],
     ],
-] );
+    'menu_order' => 0,
+    'position' => 'side',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+]);
