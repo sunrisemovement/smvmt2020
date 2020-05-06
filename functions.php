@@ -32,3 +32,13 @@ add_filter('acf/settings/show_admin', 'smvmt2020_acf_settings_show_admin');
 function smvmt2020_acf_settings_show_admin( $show_admin ) {
     return true;
 }
+
+/**
+ * Setup local ACF fields and groups
+ */
+
+function smvmt2020_acf_add_local_field_groups() {
+	include_once( get_stylesheet_directory() . '/includes/fields/fields.php' );
+}
+
+add_action('acf/init', 'smvmt2020_acf_add_local_field_groups');
