@@ -11,3 +11,17 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twentytwentychild
 */
+
+.smvmt2020--top-spacing-disabled .post-inner {
+    padding-top: 0;
+}
+
+.smvmt2020--top-spacing-disabled .page {
+    margin-top: 0px;
+}
+
+@media (min-width: 1220px) {
+    .smvmt2020--top-spacing-disabled .entry-content > *:first-child {
+        margin-top: 0;
+    }
+}
