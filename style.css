@@ -12,6 +12,11 @@
  Text Domain:  twentytwentychild
 */
 
+/* 
+    Disableed Top Spacing styles
+    These styles are applied only on pages with top spacing disabled
+*/
+
 .smvmt2020--top-spacing-disabled .post-inner {
     padding-top: 0;
 }
