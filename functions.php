@@ -48,9 +48,9 @@ function smvmt2020_dynamic_css() {
         $dynamic_css = "
             .site-title a,
             .site-description,
-            .primary-menu > li > a,
-            .toggle-inner,
-            .toggle-text {
+            body:not(.overlay-header) .primary-menu > li > a,
+            body:not(.overlay-header) .toggle-inner,
+            body:not(.overlay-header) .toggle-inner .toggle-text {
                 color: {$color}!important;
             }
             .header-footer-group .header-inner .toggle-wrapper::before {
