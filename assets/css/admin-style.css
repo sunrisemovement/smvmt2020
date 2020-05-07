@@ -22,6 +22,26 @@
     width: auto;
 }
 
+.smvmt2020-input--subfield {
+    background: #f3f4f5;
+    display: flex;
+    align-items: center;
+}
+
+.smvmt2020-input--subfield .acf-label {
+    margin: 0!important;
+    padding-left: 30px;
+}
+
+.smvmt2020-input--subfield .acf-label > label {
+    font-weight: 400!important;
+}
+
+.smvmt2020-input--subfield .acf-input {
+    width: auto;
+    padding-left: 30px;
+}
+
 .editor-styles-wrapper--title-disabled {
     padding-top: 0;
 }
