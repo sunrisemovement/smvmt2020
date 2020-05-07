@@ -37,3 +37,13 @@
     background: none;
     z-index: 99;
 }
+
+body:not(.overlay-header) .primary-menu > .smvmt2020-highlight {
+    padding: 12px 18px;
+    background: #ffde16;
+    margin-top: -4px;
+}
+
+body:not(.overlay-header) .primary-menu > .smvmt2020-highlight a {
+    color: rgb(51,52,46);
+}
