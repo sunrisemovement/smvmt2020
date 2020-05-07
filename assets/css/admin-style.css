@@ -21,3 +21,26 @@
     order: 1;
     width: auto;
 }
+
+.editor-styles-wrapper--title-disabled {
+    padding-top: 0;
+}
+
+.editor-styles-wrapper--title-disabled .editor-post-title {
+    padding-top: 44px;
+    height: 135px;
+    background: #fff;
+    height: 135px;
+    border-bottom: 1px #e2e4e7 solid;
+}
+
+.editor-styles-wrapper--title-disabled .editor-post-title__block .editor-post-title__input {
+    text-align: left;
+    font-size: 36px;
+    font-weight: 400;
+    color: #999;
+}
+
+.editor-styles-wrapper--title-disabled .wp-block.editor-post-title__block.is-selected .editor-post-title__input {
+    color: #191e23;
+}

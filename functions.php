@@ -12,9 +12,10 @@ function enqueue_parent_styles() {
 /**
  * Enqeue custom admin styles
  */
-add_action( 'admin_enqueue_scripts', 'enqueue_admin_styles' );
+add_action( 'admin_enqueue_scripts', 'enqueue_admin_assets' );
 
-function enqueue_admin_styles() {
+function enqueue_admin_assets() {
+    wp_enqueue_script( 'smvmt2020-admin-script', get_stylesheet_directory_uri().'/assets/js/admin-script.js', ['jquery'] );
    wp_enqueue_style( 'smvmt2020-admin-style', get_stylesheet_directory_uri().'/assets/css/admin-style.css' );
 }
 
