@@ -16,11 +16,19 @@ jQuery(function($) {
         }
     }
 
-    $('[name="acf[field_smvmt2020_appearance_disable_title]"]').change(function () {
+    $('[name="acf[field_smvmt2020_appearance_disable_title]"]').change(function (evt) {
         $('.editor-styles-wrapper').toggleClass('editor-styles-wrapper--title-disabled');
     });
 
+    acf.addAction('show_field/key=field_smvmt2020_appearance_disable_top_spacing', function () {
+        if ( acf.getField('field_smvmt2020_appearance_disable_top_spacing').val() === 1 ) {
+            console.log('top spacing disabled');
+            $('.editor-styles-wrapper').addClass('editor-styles-wrapper--top-spacing-disabled');
+        }
+    }); 
+
     $('[name="acf[field_smvmt2020_appearance_disable_top_spacing]"]').change(function () {
+        console.log('top spacing', acf.getField('field_smvmt2020_appearance_disable_top_spacing').val());
         $('.editor-styles-wrapper').toggleClass('editor-styles-wrapper--top-spacing-disabled');
     });
 
