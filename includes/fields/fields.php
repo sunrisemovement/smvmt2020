@@ -54,7 +54,15 @@ acf_add_local_field_group([
             'type' => 'true_false',
             'instructions' => '',
             'required' => 0,
-            'conditional_logic' => 0,
+            'conditional_logic' => [
+				[
+					[
+						'field' => 'field_smvmt2020_appearance_disable_title',
+						'operator' => '==',
+						'value' => '1',
+                    ],
+                ],
+            ],
             'wrapper' => [
                 'width' => '',
                 'class' => 'smvmt2020-input smvmt2020-input--inline',
