@@ -10,9 +10,9 @@ acf_add_local_field_group([
     'title' => 'Appearance',
     'fields' => [
         [
-            'key' => 'field_smvmt2020_appearance_disable_title',
-            'label' => 'Disable Title',
-            'name' => 'disable_title',
+            'key' => 'field_smvmt2020_appearance_use_transparent_header',
+            'label' => 'Use Transparent Header',
+            'name' => 'use_transparent_header',
             'type' => 'true_false',
             'instructions' => '',
             'required' => 0,
@@ -29,9 +29,9 @@ acf_add_local_field_group([
             'ui_off_text' => '',
         ],
         [
-            'key' => 'field_smvmt2020_appearance_use_transparent_header',
-            'label' => 'Use Transparent Header',
-            'name' => 'use_transparent_header',
+            'key' => 'field_smvmt2020_appearance_disable_title',
+            'label' => 'Disable Title',
+            'name' => 'disable_title',
             'type' => 'true_false',
             'instructions' => '',
             'required' => 0,
@@ -54,7 +54,15 @@ acf_add_local_field_group([
             'type' => 'true_false',
             'instructions' => '',
             'required' => 0,
-            'conditional_logic' => 0,
+            'conditional_logic' => [
+				[
+					[
+						'field' => 'field_smvmt2020_appearance_disable_title',
+						'operator' => '==',
+						'value' => '1',
+                    ],
+                ],
+            ],
             'wrapper' => [
                 'width' => '',
                 'class' => 'smvmt2020-input smvmt2020-input--inline',

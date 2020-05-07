@@ -10,13 +10,26 @@ function enqueue_parent_styles() {
 }
 
 /**
- * Enqeue custom admin styles
+ * Enqeue custom admin assets
  */
 add_action( 'admin_enqueue_scripts', 'enqueue_admin_assets' );
 
 function enqueue_admin_assets() {
     wp_enqueue_script( 'smvmt2020-admin-script', get_stylesheet_directory_uri().'/assets/js/admin-script.js', ['jquery'] );
    wp_enqueue_style( 'smvmt2020-admin-style', get_stylesheet_directory_uri().'/assets/css/admin-style.css' );
+}
+
+/**
+ * Add Body class if top spacing is disabled
+ */
+add_filter( 'body_class', 'smvmt2020_add_body_class' );
+
+function smvmt2020_add_body_class ( $classes ) {
+    if ( get_field('disable_title') && get_field('disable_top_spacing') ) {
+        return array_merge( $classes, ['smvmt2020--top-spacing-disabled'] );
+    } else {
+        return $classes;
+    }
 }
 
 /**
