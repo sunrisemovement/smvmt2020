@@ -47,3 +47,65 @@ body:not(.overlay-header) .primary-menu > .smvmt2020-highlight {
 body:not(.overlay-header) .primary-menu > .smvmt2020-highlight a {
     color: rgb(51,52,46);
 }
+
+/*
+    Header Styles
+*/
+
+.site-title a,
+.site-description,
+body:not(.overlay-header) .primary-menu li:not(.smvmt2020-highlight) a,
+body:not(.overlay-header) .primary-menu li a,
+body:not(.overlay-header) .toggle-inner .toggle-text {
+    text-transform: uppercase;
+    color: #ffde16;
+    font-weight: 700;
+}
+
+.site-title a,
+.site-title a:hover,
+body:not(.overlay-header) .primary-menu li a,
+body:not(.overlay-header) .primary-menu li a:hover,
+body:not(.overlay-header) .primary-menu .current_page_ancestor {
+    text-decoration: none;
+}
+
+body:not(.overlay-header) .primary-menu .menu-item-has-children:first-child > a {
+    padding-right: 0!important;
+}
+
+.menu-item-has-children > .icon {
+    display: none;
+}
+
+.primary-menu ul {
+    top: calc(100% + 0.2rem);
+}
+
+body:not(.overlay-header) .primary-menu ul {
+    border-radius: 0px;
+    background-color: rgb(51,52,46);
+    color: #ffde16!important;
+}
+
+body:not(.overlay-header) .primary-menu > li > ul {
+    border-top: 3px #ffde16 solid;
+}
+
+body:not(.overlay-header) .primary-menu > li > ul:after {
+    border-bottom-color: #ffde16;
+}
+
+body:not(.overlay-header) .primary-menu > li > ul > li > ul {
+    border-right: 3px #ffde16 solid;
+}
+
+body:not(.overlay-header) .primary-menu > li > ul > li > ul:after {
+    border-left-color: #ffde16;
+}
+
+.primary-menu ul li.menu-item-has-children:hover > ul,
+.primary-menu ul li.menu-item-has-children:focus > ul,
+.primary-menu ul li.menu-item-has-children.focus > ul {
+    right: 100%;
+}
