@@ -30,3 +30,10 @@
         margin-top: 0;
     }
 }
+
+.smvmt2020--transparent-header-enabled #site-header {
+    position: absolute;
+    width: 100%;
+    background: none;
+    z-index: 99;
+}

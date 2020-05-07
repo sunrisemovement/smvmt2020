@@ -25,12 +25,44 @@ function enqueue_admin_assets() {
 add_filter( 'body_class', 'smvmt2020_add_body_class' );
 
 function smvmt2020_add_body_class ( $classes ) {
+
+    $append = [];
     if ( get_field('disable_title') && get_field('disable_top_spacing') ) {
-        return array_merge( $classes, ['smvmt2020--top-spacing-disabled'] );
-    } else {
-        return $classes;
+        array_push( $append, 'smvmt2020--top-spacing-disabled' );
     }
+
+    if ( get_field('use_transparent_header') ) {
+        array_push( $append, 'smvmt2020--transparent-header-enabled' );
+    }
+    
+    return array_merge( $classes, $append );
 }
+
+/**
+ * Add dynamic inline styling
+ */
+function smvmt2020_dynamic_css() {
+
+    if ( get_field('use_transparent_header') ) {
+        $color = get_field('header_font_color');
+        $dynamic_css = "
+            .site-title a,
+            .site-description,
+            body:not(.overlay-header) .primary-menu > li > a,
+            body:not(.overlay-header) .toggle-inner,
+            body:not(.overlay-header) .toggle-inner .toggle-text {
+                color: {$color}!important;
+            }
+            .header-footer-group .header-inner .toggle-wrapper::before {
+                background-color: {$color}!important;
+                opacity: 0.5;
+            }
+        ";
+        wp_add_inline_style( 'parent-style', $dynamic_css );
+    }
+
+}
+add_action( 'wp_enqueue_scripts', 'smvmt2020_dynamic_css' );
 
 /**
  * Setup Advanced Custom Fields

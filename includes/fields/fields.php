@@ -29,6 +29,29 @@ acf_add_local_field_group([
             'ui_off_text' => '',
         ],
         [
+			'key' => 'field_smvmt2020_appearance_header_font_color',
+			'label' => 'Header Font Color',
+			'name' => 'header_font_color',
+			'type' => 'color_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => [
+				[
+					[
+						'field' => 'field_smvmt2020_appearance_use_transparent_header',
+						'operator' => '==',
+						'value' => '1',
+                    ],
+                ],
+            ],
+			'wrapper' => [
+                'width' => '',
+                'class' => 'smvmt2020-input smvmt2020-input--subfield',
+                'id' => '',
+            ],
+			'default_value' => '#ffde16',
+        ],
+        [
             'key' => 'field_smvmt2020_appearance_disable_title',
             'label' => 'Disable Title',
             'name' => 'disable_title',
