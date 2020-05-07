@@ -46,13 +46,26 @@ function smvmt2020_dynamic_css() {
     if ( get_field('use_transparent_header') ) {
         $color = get_field('header_font_color');
         $text_color = smvmt2020_get_highlight_text_color( $color );
+        $submenu_bg = $text_color === '#FFFFFF' ? $color : $text_color;
+        $submenu_border = $text_color === '#FFFFFF' ? smvmt2020_shift_color($color, 60) : $color;
+        $submenu_text = $text_color === '#FFFFFF' ? $text_color : $color;
         $dynamic_css = "
             .site-title a,
             .site-description,
-            body:not(.overlay-header) .primary-menu > li > a,
-            body:not(.overlay-header) .toggle-inner,
+            body:not(.overlay-header) .primary-menu li:not(.smvmt2020-highlight) a,
+            body:not(.overlay-header) .primary-menu li a,
+            body:not(.overlay-header) .toggle-inner .toggle-text {
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            .site-title a,
+            .site-description,
+            body:not(.overlay-header) .primary-menu > li:not(.smvmt2020-highlight) > a,
             body:not(.overlay-header) .toggle-inner .toggle-text {
                 color: {$color}!important;
+            }
+            body:not(.overlay-header) .sub-menu a {
+                color: {$submenu_text}!important;
             }
             .header-footer-group .header-inner .toggle-wrapper::before {
                 background-color: {$color}!important;
@@ -63,6 +76,35 @@ function smvmt2020_dynamic_css() {
             }
             body:not(.overlay-header) .primary-menu > .smvmt2020-highlight a {
                 color: {$text_color}!important;
+            }
+            body:not(.overlay-header) .primary-menu ul {
+                border-radius: 0px;
+                background-color: {$submenu_bg}!important;
+                color: {$submenu_text}!important;
+            }
+            body:not(.overlay-header) .primary-menu > li > ul {
+                border-top: 3px {$submenu_border} solid!important;
+            }
+            body:not(.overlay-header) .primary-menu > li > ul:after {
+                border-bottom-color: {$submenu_border}!important;
+            }
+            body:not(.overlay-header) .primary-menu > li > ul > li > ul {
+                border-right: 3px {$submenu_border} solid!important;
+            }
+            body:not(.overlay-header) .primary-menu > li > ul > li > ul:after {
+                border-left-color: {$submenu_border}!important;
+            }
+        ";
+        wp_add_inline_style( 'parent-style', $dynamic_css );
+    } else {
+        $dynamic_css = "
+            body:not(.overlay-header) .primary-menu ul {
+                border-radius: 0px;
+                background-color: rgb(51,52,46)!important;
+                color: #ffde16!important;
+            }
+            body:not(.overlay-header) .primary-menu > li > ul:after {
+                border-bottom-color: #ffde16!important;
             }
         ";
         wp_add_inline_style( 'parent-style', $dynamic_css );
@@ -88,6 +130,14 @@ function smvmt2020_get_highlight_text_color ($bg){
     }else{
         return '#FFFFFF';
     }
+}
+
+function smvmt2020_shift_color ($color, $shift){
+    $color = trim($color, '#');
+    $r = hexdec(substr($color,0,2)) + $shift;
+    $g = hexdec(substr($color,2,2)) + $shift;
+    $b = hexdec(substr($color,4,2)) + $shift;
+    return sprintf("#%02x%02x%02x", $r, $g, $b);
 }
 
 /**
