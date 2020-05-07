@@ -45,6 +45,7 @@ function smvmt2020_dynamic_css() {
 
     if ( get_field('use_transparent_header') ) {
         $color = get_field('header_font_color');
+        $text_color = smvmt2020_get_highlight_text_color( $color );
         $dynamic_css = "
             .site-title a,
             .site-description,
@@ -57,12 +58,37 @@ function smvmt2020_dynamic_css() {
                 background-color: {$color}!important;
                 opacity: 0.5;
             }
+            body:not(.overlay-header) .primary-menu > .smvmt2020-highlight {
+                background: {$color}!important;
+            }
+            body:not(.overlay-header) .primary-menu > .smvmt2020-highlight a {
+                color: {$text_color}!important;
+            }
         ";
         wp_add_inline_style( 'parent-style', $dynamic_css );
     }
 
 }
 add_action( 'wp_enqueue_scripts', 'smvmt2020_dynamic_css' );
+
+function smvmt2020_get_highlight_text_color ($bg){
+    $bg = trim($bg, '#');
+    $r = hexdec(substr($bg,0,2));
+    $g = hexdec(substr($bg,2,2));
+    $b = hexdec(substr($bg,4,2));
+
+    $squared_contrast = (
+        $r * $r * .299 +
+        $g * $g * .587 +
+        $b * $b * .114
+    );
+
+    if($squared_contrast > pow(130, 2)){
+        return 'rgb(51,52,46)';
+    }else{
+        return '#FFFFFF';
+    }
+}
 
 /**
  * Setup Advanced Custom Fields
