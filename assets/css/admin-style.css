@@ -32,6 +32,7 @@
     background: #fff;
     height: 135px;
     border-bottom: 1px #e2e4e7 solid;
+    margin-bottom: 6rem;
 }
 
 .editor-styles-wrapper--title-disabled .editor-post-title__block .editor-post-title__input {
@@ -43,4 +44,13 @@
 
 .editor-styles-wrapper--title-disabled .wp-block.editor-post-title__block.is-selected .editor-post-title__input {
     color: #191e23;
+}
+
+.editor-styles-wrapper--top-spacing-disabled .editor-post-title {
+    margin-bottom: 0!important;
+}
+
+.editor-styles-wrapper--top-spacing-disabled .block-editor-block-list__block:first-of-type,
+.editor-styles-wrapper--top-spacing-disabled .block-editor-block-list__block:first-of-type .wp-block-embed {
+    margin-top: 0!important;
 }
