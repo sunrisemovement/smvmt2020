@@ -134,9 +134,9 @@ function smvmt2020_get_highlight_text_color ($bg){
 
 function smvmt2020_shift_color ($color, $shift){
     $color = trim($color, '#');
-    $r = hexdec(substr($color,0,2)) + $shift;
-    $g = hexdec(substr($color,2,2)) + $shift;
-    $b = hexdec(substr($color,4,2)) + $shift;
+    $r = hexdec(substr($color,0,2)) + $shift < 255 ? hexdec(substr($color,0,2)) + $shift : 255;
+    $g = hexdec(substr($color,2,2)) + $shift < 255 ? hexdec(substr($color,2,2)) + $shift : 255;
+    $b = hexdec(substr($color,4,2)) + $shift < 255 ? hexdec(substr($color,4,2)) + $shift : 255;
     return sprintf("#%02x%02x%02x", $r, $g, $b);
 }
 
