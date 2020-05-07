@@ -71,3 +71,16 @@
 .editor-styles-wrapper--top-spacing-disabled .block-editor-block-list__block:first-of-type .wp-block-embed {
     margin-top: 0!important;
 }
+
+/* Editor Structure --------------------------------- */
+
+.wp-block {
+	max-width: 720px;
+}
+
+.wp-block .wp-block[data-type="core/group"]:not([data-align="full"]):not([data-align="wide"]):not([data-align="left"]):not([data-align="right"]),
+.wp-block .wp-block[data-type="core/cover"]:not([data-align="full"]):not([data-align="wide"]):not([data-align="left"]):not([data-align="right"]) {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 720px;
+}

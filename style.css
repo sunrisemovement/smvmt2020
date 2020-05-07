@@ -109,3 +109,25 @@ body:not(.overlay-header) .primary-menu > li > ul > li > ul:after {
 .primary-menu ul li.menu-item-has-children.focus > ul {
     right: 100%;
 }
+
+/*
+    Site Width
+*/
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: 72rem;
+    width: calc(100% - 4rem);
+}
+
+[class*="__inner-container"] .wp-block-group:not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright),
+[class*="__inner-container"] .wp-block-cover:not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright) {
+	max-width: 72rem;
+}
+
+[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	max-width: 72rem;
+}
+
+.alignfull > figcaption,
+.alignfull > .wp-caption-text {
+	max-width: 72rem;
+}
