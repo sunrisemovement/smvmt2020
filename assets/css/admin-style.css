@@ -97,7 +97,8 @@
 
 .editor-post-title {
     padding: 50px 0;
-    background: rgb(51,52,46)!important
+    background: rgb(51,52,46)!important;
+    margin-bottom: 5rem;
 }
 
 .editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter,
