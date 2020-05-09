@@ -83,7 +83,7 @@ body:not(.overlay-header) .toggle-inner .toggle-text {
 .site-title a,
 .site-title a:hover,
 body:not(.overlay-header) .primary-menu li a,
-body:not(.overlay-header) .primary-menu li a:hover,
+body:not(.overlay-header) .primary-menu li:not(.smvmt2020-highlight) a:hover,
 body:not(.overlay-header) .primary-menu .current_page_ancestor,
 .modal-menu a:focus, .modal-menu a:hover, .modal-menu li.current-menu-item > .ancestor-wrapper > a, .modal-menu li.current_page_ancestor > .ancestor-wrapper > a, 
 body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote:before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover {
