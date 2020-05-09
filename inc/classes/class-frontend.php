@@ -17,7 +17,7 @@ class Frontend {
     public function filterBodyClass ( $classes ) {
 
         $append = [];
-        if ( get_field('disable_title') && get_field('disable_top_spacing') ) {
+        if ( get_field('disable_top_spacing') ) {
             array_push( $append, 'smvmt2020--top-spacing-disabled' );
         }
     
