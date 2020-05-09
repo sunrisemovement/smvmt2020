@@ -65,6 +65,21 @@ body:not(.overlay-header) .toggle-inner .toggle-text {
     color: #ffde16;
 }
 
+.site-title a {
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: normal;
+}
+
+.site-title svg {
+    display: block;
+    height: 30px;
+    margin-right: 12px;
+    margin-top: 4px;
+    float: left;
+    fill: #ffde16;
+}
+
 .site-title a,
 .site-title a:hover,
 body:not(.overlay-header) .primary-menu li a,
