@@ -103,6 +103,7 @@
 .editor-styles-wrapper .wp-block-cover h5:not(.has-text-color),
 .editor-styles-wrapper .wp-block-cover h6:not(.has-text-color),
 .editor-post-title__block .editor-post-title__input,
+.editor-post-title__block .editor-post-title__input::placeholder,
 .wp-block.editor-post-title__block.is-selected .editor-post-title__input,
 .editor-styles-wrapper .wp-block h1,
 .editor-styles-wrapper .wp-block h2,
@@ -116,6 +117,10 @@
     color: #ffde16;
 }
 
+.editor-post-title__block .editor-post-title__input::placeholder {
+    color: rgb(75, 77, 67);
+}
+
 .editor-styles-wrapper .wp-block h1,
 .editor-styles-wrapper .wp-block h2,
 .editor-styles-wrapper .wp-block h3,
@@ -125,6 +130,7 @@
     color: #222;
 }
 
+.block-editor-default-block-appender,
 .editor-styles-wrapper cite,
 .editor-styles-wrapper figcaption,
 .editor-styles-wrapper table,
@@ -192,6 +198,15 @@
 .editor-styles-wrapper--title-disabled .wp-block.editor-post-title__block.is-selected .editor-post-title__input {
     color: #191e23;
     text-transform: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    letter-spacing: normal;
+}
+
+.editor-post-title__block .editor-post-title__input::placeholder {
+    color: #999;
+    text-transform: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    letter-spacing: normal;
 }
 
 .editor-styles-wrapper--top-spacing-disabled .editor-post-title {
