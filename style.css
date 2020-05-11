@@ -180,7 +180,7 @@ h5,
 h6,
 .footer-copyright,
 .toggle-text {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif!important;
     text-transform: uppercase;
     letter-spacing: .125em;
     color: #ffde16;
@@ -213,6 +213,12 @@ button:not(.toggle), .button, .faux-button, .wp-block-button__link, .wp-block-fi
 .comments-wrapper h5,
 .comments-wrapper h6 {
     color: #222;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3 {
+    font-weight: 900;
 }
 
 body,
