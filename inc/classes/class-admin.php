@@ -6,6 +6,7 @@ class Admin {
 
     public function init () {
         $this->loadAssets();
+        $this->modifyPageTemplates();
     }
 
     protected function loadAssets () {
@@ -25,5 +26,15 @@ class Admin {
             'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap',
             false
         );
+    }
+
+
+    protected function modifyPageTemplates () {
+        add_filter( 'theme_page_templates', [$this, 'removeTwentyTwentyPageTemplates'] );
+    }
+
+    public function removeTwentyTwentyPageTemplates ( $templates ) {
+        unset( $templates['templates/template-cover.php'] );
+        return $templates;
     }
 }
