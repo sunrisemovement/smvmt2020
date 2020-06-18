@@ -261,3 +261,14 @@ p {
 .social-icons a, #site-footer button:not(.toggle), #site-footer .button, #site-footer .faux-button, #site-footer .wp-block-button__link, #site-footer .wp-block-file__button, #site-footer input[type='button'], #site-footer input[type='reset'], #site-footer input[type='submit'] {
     background-color: #ffde16!important;
 }
+
+.footer-widgets-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-widgets {
+    margin: 2rem 0 4rem 0;
+    width: 100%;
+}
