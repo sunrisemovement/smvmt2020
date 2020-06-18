@@ -18,7 +18,7 @@ class Admin {
         wp_enqueue_style( 'smvmt2020-admin-style', get_stylesheet_directory_uri().'/assets/css/admin-style.css' );
         wp_enqueue_style(
             'smvmt2020-source-serif-pro',
-            'https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600;700&display=swap',
+            'https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap',
             false
         );
         wp_enqueue_style(

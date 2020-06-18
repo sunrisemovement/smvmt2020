@@ -287,9 +287,11 @@ body,
 .entry-content address,
 .entry-content .wp-caption-text,
 .entry-content .wp-block-file,
+.entry-content li,
 p {
     font-family: 'Source Serif Pro', serif;
     color: #222;
+    font-weight: 400;
 }
 
 .footer-widgets-wrapper p,

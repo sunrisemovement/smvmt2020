@@ -137,9 +137,13 @@
 .editor-styles-wrapper address,
 .editor-styles-wrapper .wp-caption-text,
 .editor-styles-wrapper .wp-block-file,
-.editor-styles-wrapper .wp-block-paragraph {
+.editor-styles-wrapper .wp-block-paragraph,
+.editor-styles-wrapper li,
+.editor-styles-wrapper p
+ {
     font-family: 'Source Serif Pro', serif;
     color: #222;
+    font-weight: 400;
 }
 
 .footer-widgets-wrapper p,
