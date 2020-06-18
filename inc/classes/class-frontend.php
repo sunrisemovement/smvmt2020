@@ -139,14 +139,15 @@ class Frontend {
                         background-color: {$color}!important;
                         opacity: 0.5;
                     }
-                    body:not(.overlay-header) .primary-menu > .smvmt2020-highlight {
-                        background: {$color}!important;
+                    body:not(.overlay-header) .primary-menu .smvmt2020-highlight {
+                        background: {$submenu_border}!important;
                     }
-                    body:not(.overlay-header) .primary-menu > .smvmt2020-highlight a,
-                    body:not(.overlay-header) .primary-menu > .smvmt2020-highlight a:hover {
+                    body:not(.overlay-header) .primary-menu .smvmt2020-highlight > a,
+                    body:not(.overlay-header) .primary-menu .smvmt2020-highlight > a:hover,
+                    body:not(.overlay-header) .primary-menu > li > ul .smvmt2020-highlight > a,
+                    body:not(.overlay-header) .primary-menu > li > ul .smvmt2020-highlight > a:hover {
                         color: {$text_color}!important;
                     }
-
                     body:not(.overlay-header) .primary-menu ul {
                         border-radius: 0px;
                         background-color: {$submenu_bg}!important;
