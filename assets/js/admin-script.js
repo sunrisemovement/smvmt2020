@@ -32,4 +32,11 @@ jQuery(function($) {
         $('.editor-styles-wrapper').toggleClass('editor-styles-wrapper--top-spacing-disabled');
     });
 
+    acf.add_filter('color_picker_args', function( args, $field ){
+        // add the hexadecimal codes here for the colors you want to appear as swatches
+        args.palettes = ['#ffde16', '#33342E', '#222', '#ffefea']
+        // return colors
+        return args;
+    });
+
 });

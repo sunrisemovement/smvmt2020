@@ -16,6 +16,8 @@ class Bootstrapper {
         } else {
             $this->setupFrontend();
         }
+
+        add_action( 'after_setup_theme', [$this, 'twentynineteen_child_setup'], 100 );
     }
 
     protected function setupAdmin () {
@@ -31,6 +33,35 @@ class Bootstrapper {
     protected function setupACF () {
         include_once( get_stylesheet_directory() . '/inc/classes/class-acf.php' );
         (new ACF)->init();
+    }
+
+    function twentynineteen_child_setup() {
+        // Editor color palette.
+        add_theme_support(
+            'editor-color-palette',
+            array(
+                array(
+                    'name' => esc_html__( 'Gold', 'smvmt2020' ),
+                    'slug' => 'sunrise-gold',
+                    'color' => '#ffde16'
+                ),
+                array(
+                    'name' => esc_html__( 'Green', 'smvmt2020' ),
+                    'slug' => 'sunrise-green',
+                    'color' => '#33342E'
+                ),
+                array(
+                    'name' => esc_html__( 'Grey', 'smvmt2020' ),
+                    'slug' => 'sunrise-grey',
+                    'color' => '#222'
+                ),
+                array(
+                    'name' => esc_html__( 'Eggshell', 'smvmt2020' ),
+                    'slug' => 'sunrise-eggshell',
+                    'color' => '#ffefea'
+                )
+            )
+        );
     }
 
 }
