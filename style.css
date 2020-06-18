@@ -154,6 +154,25 @@ body:not(.overlay-header) .primary-menu > li > ul > li > ul:after {
 	max-width: 72rem;
 }
 
+.wp-social-link {
+    background: #222 !important;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 6px;
+    transition: opacity 0.2s ease;
+}
+
+.wp-block-social-links:hover .wp-social-link {
+    opacity: 0.5;
+}
+
+.wp-social-link:hover {
+    opacity: 1!important;
+}
+
 /*
     Typography
 */
