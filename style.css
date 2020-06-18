@@ -148,6 +148,26 @@ body:not(.overlay-header) .primary-menu > li > ul > li > ul:after {
     right: 100%;
 }
 
+.footer-menu {
+    font-family: 'Source Sans Pro', sans-serif!important;
+    text-transform: uppercase;
+    letter-spacing: .125em;
+    font-weight: 700;
+    align-items: center;
+}
+
+.footer-menu a,
+.footer-menu a:hover {
+    text-decoration: none;
+}
+
+.footer-menu .smvmt2020-highlight > a,
+.footer-menu .smvmt2020-highlight > a:hover {
+    color: rgb(51,52,46) !important;
+    padding: 12px 18px;
+    background: #ffde16;
+}
+
 /*
     Site Width
 */
