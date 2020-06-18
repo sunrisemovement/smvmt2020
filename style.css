@@ -111,6 +111,9 @@ ul.primary-menu {
     align-items: center;
 }
 
+.primary-menu > li.menu-item-has-children > a {
+    padding-right: 0;
+}
 
 .primary-menu > li {
     margin: 0.8rem 1.6rem;
