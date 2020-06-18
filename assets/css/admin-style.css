@@ -217,3 +217,14 @@
 .editor-styles-wrapper--top-spacing-disabled .block-editor-block-list__block:first-of-type .wp-block-embed {
     margin-top: 0!important;
 }
+
+.wp-social-link {
+    background: #222 !important;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 6px;
+    transition: opacity 0.2s ease;
+}
