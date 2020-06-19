@@ -171,6 +171,19 @@ class Frontend {
                 ";
             } else {
                 $dynamic_css = $dynamic_css . "
+                    body:not(.overlay-header) .primary-menu > li > a,
+                    body:not(.overlay-header) .primary-menu > li > .icon,
+                    .modal-menu a,
+                    .footer-menu a,
+                    .footer-widgets a,
+                    #site-footer .wp-block-button.is-style-outline,
+                    .wp-block-pullquote:before,
+                    .singular:not(.overlay-header) .entry-header a,
+                    .archive-header a,
+                    .header-footer-group .color-accent,
+                    .header-footer-group .color-accent-hover:hover {
+                        color: #ffde16!important;
+                    }
                     body:not(.overlay-header) .primary-menu ul {
                         border-radius: 0px;
                         background-color: rgb(51,52,46)!important;

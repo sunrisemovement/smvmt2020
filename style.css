@@ -217,6 +217,20 @@ body:not(.overlay-header) .primary-menu > li > ul > li > ul:after {
     Typography
 */
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.footer-copyright,
+.toggle-text {
+    font-family: 'Source Sans Pro', sans-serif!important;
+    text-transform: uppercase;
+    letter-spacing: .125em;
+}
+
 .wp-block-cover-image .wp-block-subhead:not(.has-text-color),
 .wp-block-cover-image h1:not(.has-text-color),
 .wp-block-cover-image h2:not(.has-text-color),
@@ -230,18 +244,7 @@ body:not(.overlay-header) .primary-menu > li > ul > li > ul:after {
 .wp-block-cover h3:not(.has-text-color),
 .wp-block-cover h4:not(.has-text-color),
 .wp-block-cover h5:not(.has-text-color),
-.wp-block-cover h6:not(.has-text-color),
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.footer-copyright,
-.toggle-text {
-    font-family: 'Source Sans Pro', sans-serif!important;
-    text-transform: uppercase;
-    letter-spacing: .125em;
+.wp-block-cover h6:not(.has-text-color) {
     color: #ffde16;
 }
 
@@ -250,16 +253,16 @@ h6,
     color: #ffde16!important;
 }
 
-.entry-categories a {
+/* .entry-categories a {
     color: rgb(51,52,46)!important;
-}
+} */
 
 button:not(.toggle), .button, .faux-button, .wp-block-button__link, .wp-block-file .wp-block-file__button, input[type="button"], input[type="reset"], input[type="submit"], .bg-accent, .bg-accent-hover:hover, .bg-accent-hover:focus, :root .has-accent-background-color, .comment-reply-link {
     background-color: rgb(51,52,46);
     font-family: 'Source Sans Pro', serif;
 }
 
-.entry-content h1,
+/* .entry-content h1,
 .entry-content h2,
 .entry-content h3,
 .entry-content h4,
@@ -272,7 +275,7 @@ button:not(.toggle), .button, .faux-button, .wp-block-button__link, .wp-block-fi
 .comments-wrapper h5,
 .comments-wrapper h6 {
     color: #222;
-}
+} */
 
 .entry-content h1,
 .entry-content h2,
@@ -290,7 +293,6 @@ body,
 .entry-content li,
 p {
     font-family: 'Source Serif Pro', serif;
-    color: #222;
     font-weight: 400;
 }
 
@@ -313,4 +315,20 @@ p {
 .footer-widgets {
     margin: 2rem 0 4rem 0;
     width: 100%;
+}
+
+.has-sunrise-green-background-color {
+    background: #33342E;
+}
+
+.has-sunrise-gold-background-color {
+    background: #ffde16;
+}
+
+.has-sunrise-eggshell-background-color {
+    background: #ffefea;
+}
+
+.has-sunrise-grey-background-color {
+    background: #222;
 }
