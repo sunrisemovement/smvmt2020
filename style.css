@@ -12,7 +12,7 @@
  Text Domain:  twentytwentychild
 */
 
-/* 
+/*
     Disableed Top Spacing styles
     These styles are applied only on pages with top spacing disabled
 */
@@ -93,7 +93,7 @@ body:not(.overlay-header) .toggle-inner .toggle-text {
 body:not(.overlay-header) .primary-menu li a,
 body:not(.overlay-header) .primary-menu li:not(.smvmt2020-highlight) a:hover,
 body:not(.overlay-header) .primary-menu .current_page_ancestor,
-.modal-menu a:focus, .modal-menu a:hover, .modal-menu li.current-menu-item > .ancestor-wrapper > a, .modal-menu li.current_page_ancestor > .ancestor-wrapper > a, 
+.modal-menu a:focus, .modal-menu a:hover, .modal-menu li.current-menu-item > .ancestor-wrapper > a, .modal-menu li.current_page_ancestor > .ancestor-wrapper > a,
 body:not(.overlay-header) .primary-menu > li > a, body:not(.overlay-header) .primary-menu > li > .icon, .modal-menu a, .footer-menu a, .footer-widgets a, #site-footer .wp-block-button.is-style-outline, .wp-block-pullquote:before, .singular:not(.overlay-header) .entry-header a, .archive-header a, .header-footer-group .color-accent, .header-footer-group .color-accent-hover:hover {
     text-decoration: none;
     color: #ffde16;
@@ -157,11 +157,13 @@ body:not(.overlay-header) .primary-menu > li > ul > li > ul:after {
     letter-spacing: .125em;
     font-weight: 700;
     align-items: center;
+    font-size: 16px;
 }
 
 .footer-menu a,
 .footer-menu a:hover {
     text-decoration: none;
+    color: #ffde16 !important;
 }
 
 .footer-menu .smvmt2020-highlight > a,
@@ -303,18 +305,26 @@ p {
 }
 
 .social-icons a, #site-footer button:not(.toggle), #site-footer .button, #site-footer .faux-button, #site-footer .wp-block-button__link, #site-footer .wp-block-file__button, #site-footer input[type='button'], #site-footer input[type='reset'], #site-footer input[type='submit'] {
-    background-color: #ffde16!important;
+    background-color: white!important;
+    color: rgb(51,52,46);
+}
+
+.footer-widgets-outer-wrapper {
+  padding: 2rem;
 }
 
 .footer-widgets-wrapper {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin: 0;
+    width: 100%;
 }
 
 .footer-widgets {
-    margin: 2rem 0 4rem 0;
+    margin: 1rem 0 2rem 0;
     width: 100%;
+    color: white;
 }
 
 .has-sunrise-green-background-color {
