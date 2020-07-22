@@ -6,7 +6,7 @@ class Admin {
 
     public function init () {
         $this->loadAssets();
-        $this->modifyPageTemplates();
+        //$this->modifyPageTemplates();
     }
 
     protected function loadAssets () {
@@ -37,4 +37,5 @@ class Admin {
         unset( $templates['templates/template-cover.php'] );
         return $templates;
     }
+
 }

@@ -5,12 +5,14 @@ namespace smvmt2020;
 use smvmt2020\ACF;
 use smvmt2020\Admin;
 use smvmt2020\Frontend;
+use smvmt2020\CPT;
 
 class Bootstrapper {
 
     public function init () {
         $this->setupACF();
-        
+        $this->setupCustomPostType();
+
         if ( is_admin() ) {
             $this->setupAdmin();
         } else {
@@ -34,6 +36,12 @@ class Bootstrapper {
         include_once( get_stylesheet_directory() . '/inc/classes/class-acf.php' );
         (new ACF)->init();
     }
+
+    protected function setupCustomPostType () {
+        include_once( get_stylesheet_directory() . '/inc/classes/class-cpt.php' );
+        (new CPT)->init();
+    }
+
 
     function twentynineteen_child_setup() {
         // Editor color palette.
@@ -63,5 +71,4 @@ class Bootstrapper {
             )
         );
     }
-
 }
